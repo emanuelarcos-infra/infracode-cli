@@ -5,7 +5,7 @@ CLI del Infra AI Framework. Configura agentes de IA en tus proyectos con un solo
 ## Instalación
 
 ```bash
-curl -fsSL https://github.com/emanuelarcos-infra/infracode-cli/releases/latest/download/install.sh | bash
+curl -fsSL https://github.com/ifclatam/infracode-releases/releases/latest/download/install.sh | bash
 ```
 
 ### Plataformas soportadas
