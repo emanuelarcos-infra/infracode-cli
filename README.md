@@ -110,6 +110,8 @@ Primero, abrí tu herramienta de IA con el orquestador (ver paso 4). Una vez den
 
 Esto genera `.infracode/memory-bank/project.md` y `technical.md` que los agentes leen automáticamente en cada sesión.
 
+Una vez generados, **revisá ambos archivos**. Podés editarlos a mano o pedirle al agente que haga ajustes. El objetivo es que reflejen con precisión tu proyecto: stack, arquitectura, decisiones clave, convenciones. Toda información que sea relevante para que la IA trabaje bien en contexto va ahí. Lo que no aplica a tu proyecto, sacalo.
+
 ---
 
 ### 4. Iniciar el orquestador
