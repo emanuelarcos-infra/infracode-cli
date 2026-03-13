@@ -1,11 +1,29 @@
-# InfraCode CLI
+# Infra.Code CLI
 
-CLI del Infra AI Framework. Configura agentes de IA en tus proyectos con un solo comando.
+CLI del **Infra AI Framework** de Infracommerce. Configura agentes de IA especializados en tus proyectos con un solo comando — y los conecta al flujo de Spec-Driven Development.
+
+---
 
 ## Instalación
 
+### macOS y Linux
+
 ```bash
 curl -fsSL https://github.com/ifclatam/infracode-releases/releases/latest/download/install.sh | bash
+```
+
+### Windows (PowerShell)
+
+```powershell
+irm https://github.com/ifclatam/infracode-releases/releases/latest/download/install.ps1 | iex
+```
+
+> Si obtenés un error de Execution Policy: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
+### Verificar instalación
+
+```bash
+infracode --version
 ```
 
 ### Plataformas soportadas
@@ -14,15 +32,138 @@ curl -fsSL https://github.com/ifclatam/infracode-releases/releases/latest/downlo
 |---|---|
 | macOS | Intel (amd64) |
 | macOS | Apple Silicon (arm64) |
-| Linux | x86-64 (amd64) |
-| Linux | ARM64 |
+| Linux | x86_64 (amd64) |
+| Linux | ARM64 (aarch64) |
+| Windows | x86_64 (amd64) |
+| Windows | ARM64 (arm64) |
 
-## Uso
+---
+
+## Herramientas soportadas
+
+| Herramienta | Estado |
+|-------------|--------|
+| **Claude Code** | ✅ Estable |
+| **Open Code** | 🔶 Beta |
+| **Kilo Code** | 🔶 Beta |
+
+---
+
+## Primeros pasos
+
+### 1. Configurar el Gateway
+
+El Gateway centraliza el acceso a los modelos de IA. Configuralo **una sola vez** en tu máquina antes de empezar.
+
+**Para Claude Code** (seleccionás 2 modelos: uno principal y uno para sub-agentes):
 
 ```bash
+infracode gateway --claude
+```
+
+> Para volver a tu suscripción personal de Claude, remové el gateway y reabrí la sesión:
+> ```bash
+> infracode gateway remove --claude
+> ```
+
+**Para Open Code** (un solo modelo):
+
+```bash
+infracode gateway --opencode
+```
+
+> **Importante:** Después de cualquier cambio en el gateway, cerrá la sesión de Claude y reabrila para que los cambios tomen efecto:
+> ```bash
+> claude --resume <session-id>
+> ```
+
+---
+
+### 2. Inicializar el proyecto
+
+Desde el directorio raíz de tu proyecto:
+
+```bash
+cd mi-proyecto
 infracode init
 ```
 
-## Actualización
+El wizard te guía para seleccionar herramientas de IA, plataforma y configurar el Memory Bank.
 
-Para actualizar a la última versión, corré el mismo comando de instalación.
+---
+
+### 3. Configurar el Memory Bank
+
+El Memory Bank le da al asistente contexto persistente sobre tu proyecto entre sesiones.
+
+Primero, abrí tu herramienta de IA con el orquestador (ver paso 4). Una vez dentro, ejecutá el comando:
+
+**Si es un proyecto existente** (el agente analiza el código):
+```
+/infra:memory-bank-init
+```
+
+**Si es un proyecto nuevo** (le describís qué querés construir):
+```
+/infra:memory-bank-init — descripción del proyecto, tech stack, objetivos
+```
+
+Esto genera `.infracode/memory-bank/project.md` y `technical.md` que los agentes leen automáticamente en cada sesión.
+
+---
+
+### 4. Iniciar el orquestador
+
+Una vez configurado el proyecto, abrí tu herramienta de IA con el agente orquestador como punto de entrada.
+
+**Claude Code:**
+
+```bash
+claude --agent infra-orchestrator
+```
+
+> Esto es clave. El orquestador es el coordinador del flujo — recibe tu requerimiento y delega a los agentes especializados (Spec, Plan, Code, Validate).
+
+**OpenCode / Kilo Code:**
+
+Abrí la herramienta y el orquestador estará disponible como modo/agente principal.
+
+---
+
+## El flujo de trabajo
+
+Una vez dentro del orquestador, el flujo es:
+
+```
+Tu requerimiento
+      │
+      ▼
+  [Spec]   →  spec.md con criterios de aceptación
+      │            ↑ gate: vos aprobás
+      ▼
+  [Plan]   →  plan.md + tasks.json con tareas atómicas
+      │            ↑ gate: vos aprobás
+      ▼
+  [Code]   →  implementación + tests
+      │
+      ▼
+  [Validate] →  qa-report.md (PASS / FAIL por criterio)
+```
+
+Cada etapa produce artefactos verificables. Vos aprobás antes de avanzar.
+
+---
+
+## Actualizar el CLI
+
+```bash
+infracode update
+```
+
+---
+
+## Más información
+
+- [Documentación completa del Infra AI Framework](https://github.com/ifclatam/infracode-cli/tree/main/docs)
+- [¿Qué es el Infra AI Framework?](https://github.com/ifclatam/infracode-cli/blob/main/docs/framework.md)
+- [Referencia de comandos](https://github.com/ifclatam/infracode-cli/blob/main/docs/commands.md)
