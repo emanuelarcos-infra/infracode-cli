@@ -1,4 +1,4 @@
-# InfraAI Framework
+# Infra AI Framework
 
 > Spec-Driven Development: un proceso estandarizado para trabajar con inteligencia artificial en desarrollo de software.
 
