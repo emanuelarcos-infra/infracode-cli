@@ -164,8 +164,13 @@ infracode update
 
 ---
 
-## Más información
+## Documentación
 
-- [Documentación completa del Infra AI Framework](https://github.com/ifclatam/infracode-cli/tree/main/docs)
-- [¿Qué es el Infra AI Framework?](https://github.com/ifclatam/infracode-cli/blob/main/docs/framework.md)
-- [Referencia de comandos](https://github.com/ifclatam/infracode-cli/blob/main/docs/commands.md)
+| Documento | Contenido |
+|-----------|-----------|
+| [Guía de Onboarding](docs/onboarding.md) | Flujo completo paso a paso con ejemplo end-to-end |
+| [Infra AI Framework](docs/framework.md) | La metodología completa: SDD, etapas, agentes, Memory Bank |
+| [Referencia de Comandos](docs/commands.md) | Sintaxis, flags y ejemplos de todos los comandos |
+| [Conceptos](docs/concepts.md) | Memory Bank, Skills y Presets |
+| [Memory Bank](docs/memory-bank.md) | Sistema de contexto persistente del proyecto |
+| [¿Por qué sub-agentes?](docs/why-subagents.md) | Decisiones de arquitectura sobre el modelo de agentes |
