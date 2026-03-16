@@ -4,13 +4,13 @@
 
 ---
 
-## Qué es el InfraAI Framework
+## Qué es el Infra AI Framework
 
 El Infra AI Framework es una metodología de desarrollo que estandariza la forma en que equipos de ingeniería trabajan con asistentes de IA para construir software. En lugar de usar la IA como un chat de preguntas y respuestas ("vibe coding"), el framework la convierte en un proceso de entrega estructurado — igual que un equipo humano de ingeniería.
 
 El framework define un flujo de cuatro etapas — **Spec, Plan, Code, Validate** — donde cada etapa tiene un rol asignado, un input esperado, un output verificable, y un gate de aprobación humano. El resultado es un proceso colaborativo entre humanos e IA que es **consistente, medible y escalable**.
 
-**InfraCode CLI** es la herramienta que implementa este framework. Configura los asistentes de IA con agentes especializados, inyecta contexto del proyecto, y gestiona el ciclo de vida de cada sesión de desarrollo.
+**Infra Code CLI** es la herramienta que implementa este framework. Configura los asistentes de IA con agentes especializados, inyecta contexto del proyecto, y gestiona el ciclo de vida de cada sesión de desarrollo.
 
 ---
 
