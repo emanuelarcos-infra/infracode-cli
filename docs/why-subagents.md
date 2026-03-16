@@ -1,9 +1,5 @@
 # Por qué el framework usa sub-agentes dedicados
 
-**Tipo**: Decisión de arquitectura / Documentación conceptual
-**Fecha**: 2026-03-10
-**Audiencia**: Implementadores del framework, contribuidores, equipos que adoptan el approach
-
 ---
 
 ## El problema que resuelve
