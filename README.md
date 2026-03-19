@@ -12,13 +12,25 @@ CLI del **Infra AI Framework** de Infracommerce. Configura agentes de IA especia
 curl -fsSL https://github.com/ifclatam/infracode-releases/releases/latest/download/install.sh | bash
 ```
 
-### Windows (PowerShell)
+### Windows
+
+**PowerShell:**
 
 ```powershell
 irm https://github.com/ifclatam/infracode-releases/releases/latest/download/install.ps1 | iex
 ```
 
 > Si obtenés un error de Execution Policy: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
+**Git Bash / MSYS2 / WSL:**
+
+```bash
+curl -fsSL https://github.com/ifclatam/infracode-releases/releases/latest/download/install-windows.sh | bash
+```
+
+El script detecta automáticamente el entorno (Git Bash, MSYS2, Cygwin o WSL), resuelve las rutas de Windows e instala en `%LOCALAPPDATA%\Programs\infracode`.
+
+> En terminales sin soporte TUI (cmd.exe, ConHost), el CLI usa modo texto plano automáticamente. También podés forzarlo con `infracode --no-tui init` o `INFRACODE_NO_TUI=1`.
 
 ### Verificar instalación
 
