@@ -112,12 +112,12 @@ Primero, abrí tu herramienta de IA con el orquestador (ver paso 4). Una vez den
 
 **Si es un proyecto existente** (el agente analiza el código):
 ```
-/infra:memory-bank-init
+/infra-memory-bank-init
 ```
 
 **Si es un proyecto nuevo** (le describís qué querés construir):
 ```
-/infra:memory-bank-init — descripción del proyecto, tech stack, objetivos
+/infra-memory-bank-init — descripción del proyecto, tech stack, objetivos
 ```
 
 Esto genera `.infracode/memory-bank/project.md` y `technical.md` que los agentes leen automáticamente en cada sesión.
