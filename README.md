@@ -2,6 +2,8 @@
 
 CLI del **Infra AI Framework** de Infracommerce. Configura agentes de IA especializados en tus proyectos con un solo comando — y los conecta al flujo de Spec-Driven Development.
 
+[Infra AI Framework](docs/framework.md) | [Onboarding](docs/onboarding.md) | [Conceptos](docs/concepts.md) | [Comandos](docs/commands.md) | [Memory Bank](docs/memory-bank.md) | [¿Por qué sub-agentes?](docs/why-subagents.md)
+
 ---
 
 ## Instalación
@@ -177,15 +179,3 @@ Cada etapa produce artefactos verificables. Vos aprobás antes de avanzar.
 infracode update
 ```
 
----
-
-## Documentación
-
-| Documento | Contenido |
-|-----------|-----------|
-| [Guía de Onboarding](docs/onboarding.md) | Flujo completo paso a paso con ejemplo end-to-end |
-| [Infra AI Framework](docs/framework.md) | La metodología completa: SDD, etapas, agentes, Memory Bank |
-| [Referencia de Comandos](docs/commands.md) | Sintaxis, flags y ejemplos de todos los comandos |
-| [Conceptos](docs/concepts.md) | Memory Bank, Skills y Presets |
-| [Memory Bank](docs/memory-bank.md) | Sistema de contexto persistente del proyecto |
-| [¿Por qué sub-agentes?](docs/why-subagents.md) | Decisiones de arquitectura sobre el modelo de agentes |
