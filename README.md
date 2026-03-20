@@ -42,3 +42,7 @@ irm https://github.com/ifclatam/infracode-releases/releases/latest/download/inst
 ```bash
 infracode --version
 ```
+
+---
+
+Infra.Code CLI es un producto interno de **Infracommerce**. Todos los derechos reservados.
