@@ -335,7 +335,7 @@ infracode update [flags]
 3. Muestra el changelog (primeras 5 líneas).
 4. Pide confirmación (a menos que se use `--yes`).
 5. Descarga el binario correspondiente al OS/arquitectura actual.
-6. Reemplaza el binario en ejecución.
+6. Reemplaza el binario en ejecución. Si requiere permisos de administrador (ej: `/usr/local/bin`), solicita la contraseña automáticamente via `sudo`.
 
 **Ejemplos:**
 
@@ -346,6 +346,18 @@ infracode update
 # Actualizar sin confirmación (útil para scripts)
 infracode update --yes
 ```
+
+**Troubleshooting:**
+
+> **Error: permission denied** al actualizar (versiones ≤ v1.2.0)
+>
+> En versiones anteriores a v1.2.1, el comando `update` no escalaba permisos automáticamente. Si te aparece este error, podés actualizar reinstalando con el script de instalación:
+>
+> ```bash
+> curl -fsSL https://github.com/ifclatam/infracode-releases/releases/latest/download/install.sh | bash
+> ```
+>
+> Esto descarga e instala la última versión (que ya incluye el fix). A partir de v1.2.1, `infracode update` pide la contraseña de administrador automáticamente cuando es necesario.
 
 ---
 
