@@ -69,11 +69,11 @@ Secciones fijas:
 
 2. **Completar `project.md` a mano** — abrir el archivo y completar las secciones: plataforma, nombre del cliente, contexto de negocio y constraints críticas. Esta información la conoce el developer, no el agente.
 
-3. **`/infra:memory-bank-init`** — invocar el command en el asistente de IA. El Arquitecto analiza el proyecto (código, configuración, dependencias) y propone contenido para ambos archivos respetando las secciones fijas.
+3. **`/infra-memory-bank-init`** — invocar el command en el asistente de IA. El Arquitecto analiza el proyecto (código, configuración, dependencias) y propone contenido para ambos archivos respetando las secciones fijas.
 
 4. **Revisar la propuesta** — especialmente `project.md`: confirmar que la plataforma, el nombre y las constraints son correctos. Corregir lo inexacto antes de aprobar. Para `technical.md` alcanza con confirmar que refleja la realidad del código.
 
-5. **`/infra:memory-bank-update`** — cuando el proyecto evoluciona (cambia el stack, se agrega una integración, se modifica la arquitectura), ejecutar este command. El agente detecta los cambios, propone un diff de `technical.md` y espera aprobación antes de aplicar.
+5. **`/infra-memory-bank-update`** — cuando el proyecto evoluciona (cambia el stack, se agrega una integración, se modifica la arquitectura), ejecutar este command. El agente detecta los cambios, propone un diff de `technical.md` y espera aprobación antes de aplicar.
 
 ---
 
@@ -81,9 +81,9 @@ Secciones fijas:
 
 | Command | Cuándo usarlo |
 |---|---|
-| `/infra:memory-bank-init` | Al iniciar un proyecto nuevo o al incorporar el Memory Bank a un proyecto existente por primera vez. El agente analiza el proyecto y propone el contenido inicial de ambos archivos. |
-| `/infra:memory-bank-update` | Cuando el proyecto evolucionó: se cambió el stack, se agregaron integraciones, se actualizó la arquitectura o las convenciones. El agente compara el estado actual del proyecto con el Memory Bank y propone los cambios necesarios en `technical.md`. |
-| `/infra:memory-bank-migrate` | Cuando el proyecto ya tiene un memory bank en formato viejo (archivos como `brief.md`, `architecture.md`, `context.md`). El agente mapea el contenido al nuevo formato de dos archivos con secciones fijas. |
+| `/infra-memory-bank-init` | Al iniciar un proyecto nuevo o al incorporar el Memory Bank a un proyecto existente por primera vez. El agente analiza el proyecto y propone el contenido inicial de ambos archivos. |
+| `/infra-memory-bank-update` | Cuando el proyecto evolucionó: se cambió el stack, se agregaron integraciones, se actualizó la arquitectura o las convenciones. El agente compara el estado actual del proyecto con el Memory Bank y propone los cambios necesarios en `technical.md`. |
+| `/infra-memory-bank-migrate` | Cuando el proyecto ya tiene un memory bank en formato viejo (archivos como `brief.md`, `architecture.md`, `context.md`). El agente mapea el contenido al nuevo formato de dos archivos con secciones fijas. |
 
 ---
 
@@ -91,14 +91,14 @@ Secciones fijas:
 
 | Archivo | El developer | El agente |
 |---|---|---|
-| `project.md` | Edita directamente y lidera la revisión de cualquier cambio. Es la fuente de verdad sobre el negocio y las constraints. | Propone contenido inicial en `/infra:memory-bank-init`. No modifica el archivo sin aprobación explícita del developer. |
-| `technical.md` | Puede editar directamente en cualquier momento. Aprueba o rechaza los cambios propuestos por el agente. | Propone el contenido inicial en `/infra:memory-bank-init` y mantiene el archivo actualizado vía `/infra:memory-bank-update`, siempre mostrando un diff antes de aplicar. |
+| `project.md` | Edita directamente y lidera la revisión de cualquier cambio. Es la fuente de verdad sobre el negocio y las constraints. | Propone contenido inicial en `/infra-memory-bank-init`. No modifica el archivo sin aprobación explícita del developer. |
+| `technical.md` | Puede editar directamente en cualquier momento. Aprueba o rechaza los cambios propuestos por el agente. | Propone el contenido inicial en `/infra-memory-bank-init` y mantiene el archivo actualizado vía `/infra-memory-bank-update`, siempre mostrando un diff antes de aplicar. |
 
 ---
 
 ## 8. Buenas prácticas
 
-- Ejecutar `/infra:memory-bank-update` al terminar un sprint o cada vez que cambia el stack, se agrega una integración o se toma una decisión técnica significativa.
+- Ejecutar `/infra-memory-bank-update` al terminar un sprint o cada vez que cambia el stack, se agrega una integración o se toma una decisión técnica significativa.
 - Mantener `project.md` actualizado cuando cambian las constraints o la plataforma — es el archivo que menos cambia pero el más crítico para que el agente tome decisiones alineadas.
 - No agregar información de sesión (tareas actuales, bugs en curso, estado del sprint) — eso va en `.infracode/sessions/`, no en el Memory Bank.
 - Si el agente propone algo incorrecto en `technical.md`, corregirlo directamente en el archivo — es plain Markdown y cualquier editor sirve.
