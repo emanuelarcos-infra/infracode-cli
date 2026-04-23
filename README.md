@@ -1,8 +1,8 @@
-# Infracode
+# Infra.Code
 
 ## Español
 
-Infracode es la herramienta oficial de **Infracommerce** para desarrollar con AI.
+Infra.Code es la herramienta oficial de **Infracommerce** para desarrollar con AI.
 
 ### Documentación
 
@@ -10,13 +10,13 @@ La documentación está disponible en **[https://ai-hub.infra.lat](https://ai-hu
 
 Podés ingresar con tu email corporativo.
 
-Infracode es un producto interno de **Infracommerce**. Todos los derechos reservados.
+Infra.Code es un producto interno de **Infracommerce**. Todos los derechos reservados.
 
 ---
 
 ## Português
 
-Infracode é a ferramenta oficial da **Infracommerce** para desenvolver com AI.
+Infra.Code é a ferramenta oficial da **Infracommerce** para desenvolver com AI.
 
 ### Documentação
 
@@ -24,4 +24,4 @@ A documentação está disponível em **[https://ai-hub.infra.lat](https://ai-hu
 
 Você pode entrar com seu email corporativo.
 
-Infracode é um produto interno da **Infracommerce**. Todos os direitos reservados.
+Infra.Code é um produto interno da **Infracommerce**. Todos os direitos reservados.
