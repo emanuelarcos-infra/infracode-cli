@@ -1,48 +1,27 @@
-# Infra.Code CLI
+# Infracode
 
-CLI del **Infra AI Framework** de Infracommerce. Configura agentes de IA especializados en tus proyectos con un solo comando — y los conecta al flujo de Spec-Driven Development.
+## Español
 
-[Infra AI Framework](docs/framework.md) | [Primeros pasos](docs/getting-started.md) | [Onboarding](docs/onboarding.md) | [Conceptos](docs/concepts.md) | [Comandos](docs/commands.md) | [Memory Bank](docs/memory-bank.md) | [Jira](docs/jira.md) | [¿Por qué sub-agentes?](docs/why-subagents.md)
+Infracode es la herramienta oficial de **Infracommerce** para desarrollar con AI.
 
----
+### Documentación
 
-## Instalación
+La documentación está disponible en **[https://ai-hub.infra.lat](https://ai-hub.infra.lat)**.
 
-### macOS y Linux
+Podés ingresar con tu email corporativo.
 
-```bash
-curl -fsSL https://github.com/ifclatam/infracode-releases/releases/latest/download/install.sh | bash
-```
-
-### Windows
-
-**Git Bash (recomendado):**
-
-Requiere [Git for Windows](https://git-scm.com/download/win). Abrí **Git Bash** y ejecutá:
-
-```bash
-curl -fsSL https://github.com/ifclatam/infracode-releases/releases/latest/download/install-windows.sh | bash
-```
-
-El script detecta automáticamente el entorno (Git Bash, MSYS2, Cygwin o WSL), resuelve las rutas de Windows e instala en `%LOCALAPPDATA%\Programs\infracode`.
-
-**PowerShell (alternativa):**
-
-```powershell
-irm https://github.com/ifclatam/infracode-releases/releases/latest/download/install.ps1 | iex
-```
-
-> Si el antivirus bloquea el script (error `ScriptContainedMaliciousContent`), usá el método de Git Bash de arriba.
-> Si obtenés un error de Execution Policy: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
-
-> En terminales sin soporte TUI (cmd.exe, ConHost), el CLI usa modo texto plano automáticamente. También podés forzarlo con `infracode --no-tui init` o `INFRACODE_NO_TUI=1`.
-
-### Verificar instalación
-
-```bash
-infracode --version
-```
+Infracode es un producto interno de **Infracommerce**. Todos los derechos reservados.
 
 ---
 
-Infra.Code CLI es un producto interno de **Infracommerce**. Todos los derechos reservados.
+## Português
+
+Infracode é a ferramenta oficial da **Infracommerce** para desenvolver com AI.
+
+### Documentação
+
+A documentação está disponível em **[https://ai-hub.infra.lat](https://ai-hub.infra.lat)**.
+
+Você pode entrar com seu email corporativo.
+
+Infracode é um produto interno da **Infracommerce**. Todos os direitos reservados.
